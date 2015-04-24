@@ -26,7 +26,7 @@ public interface Main {
 
     /**
      * 
-     * @param arg0
+     * @param pesel
      * @return
      *     returns dziekanat.Student
      */
@@ -35,12 +35,12 @@ public interface Main {
     @RequestWrapper(localName = "getStudent", targetNamespace = "http://dziekanat/", className = "dziekanat.GetStudent")
     @ResponseWrapper(localName = "getStudentResponse", targetNamespace = "http://dziekanat/", className = "dziekanat.GetStudentResponse")
     public Student getStudent(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
+        @WebParam(name = "pesel", targetNamespace = "")
+        String pesel);
 
     /**
      * 
-     * @param arg0
+     * @param name
      * @return
      *     returns java.lang.String
      */
@@ -49,8 +49,8 @@ public interface Main {
     @RequestWrapper(localName = "hi", targetNamespace = "http://dziekanat/", className = "dziekanat.Hi")
     @ResponseWrapper(localName = "hiResponse", targetNamespace = "http://dziekanat/", className = "dziekanat.HiResponse")
     public String hi(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
+        @WebParam(name = "name", targetNamespace = "")
+        String name);
 
     /**
      * 
